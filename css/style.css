@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --navbar-height: 59px
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    /* position: sticky; */
+    position: relative;
+    top: 0px;
+}
+
+/* #navbar {
+    position: relative;
+    height: 100px;
+} */
+#navbar::before {
+    content: "";
+    /* background: url('https://source.unsplash.com/collection/190727/1600x900')no-repeat center center/cover; */
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* top: 0;
+    left: 0; */
+    opacity: 0.4;
+}
+
+#navbar ul {
+    display: flex;
+}
+
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+    /* margin-left: 22px; */
+}
+
+#navbar ul li a {
+    display: inline-block;
+    position: relative;
+    padding: 3px 24px;
+    text-decoration: none;
+    color: rgb(7, 7, 7);
+}
+
+#navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    border-radius: 300px;
+    background-color: red;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-in-out;
+}
+
+
+#navbar ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+#logo {
+    margin: 10px 34px;
+}
+
+#logo img {
+    margin: 3px 6px;
+    height: 59px;
+    border-radius: 100px;
+    transition: all 0.8s ease-in-out;
+}
+
+#logo img:hover {
+    transform: scale(1.4);
+    /* it will increase size*/
+    transform: rotate(360deg);
+    /* it will rotate*/
+}
+
+
+/* HOME SECTION */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    background: url('https://source.unsplash.com/collection/190727/1600x900')no-repeat center center/cover;
+    /* background: url('img/food delivery.jpg')no-repeat center center/cover; */
+    position: absolute;
+    height: 642px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+/* #home h1 {
+    color: black;
+    display: block;
+
+} */
+#home .primary {
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+            #fff800 0%,
+            #ff1361 29%,
+            #44107a 67%,
+            #231557 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    /* text-fill-color: transparent; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 2.5rem;
+}
+
+@keyframes textclip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+
+#home p {
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+#services {
+    margin: 34px;
+    display: flex;
+}
+
+#services .box {
+    border: 2px solid red;
+    padding: 34px;
+    margin: 2px 55px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: all 0.8s ease-in-out;
+}
+
+#services .box:hover {
+    border-radius: 23px;
+    transform: scale(1.05);
+}
+
+#services .box img {
+    height: 160px;
+    display: block;
+    margin: auto;
+    transition: all 1s ease-in-out;
+}
+
+#services .box img:hover {
+    transform: rotate(360deg);
+}
+
+#services .box p {
+    font-family: 'Bree Serif', serif;
+
+}
+
+#client-section {
+    /* height: 344px; */
+    position: relative;
+
+}
+
+#client-section::before {
+    content: "";
+    background: url('https://source.unsplash.com/collection/190727/1600x900')no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    /* top: 0px;
+    left: 0px; */
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+
+}
+
+#client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#client-items {
+    padding: 39px;
+}
+
+#client img {
+    height: 124px;
+    transition: all 0.8s ease-in-out;
+}
+
+#client img:hover {
+    transform: scale(1.2);
+}
+
+#services {}
+
+#services {}
+
+#services {}
+
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+footer {
+    background: #000;
+    color: #fff;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+/* Utitlity Classes */
+.h-primary {
+    font-size: 3.4rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+
+}
+
+.h-secondary {
+    font-size: 2.8rem;
+    padding: 12px;
+    font-family: 'Bree Serif', serif;
+
+}
+
+.btn {
+    padding: 3px 28px;
+    margin: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+
+}
+
+.btn:hover {
+    color: red;
+    transform: scale(1.1);
+    font-family: 'Bree Serif', serif;
+    border-radius: 25px;
+
+}
+.btn-1 {
+    padding: 3px 28px;
+    /* margin: 40px; */
+    margin: 20px 0 0px 240px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    
+
+}
+
+.btn-1:hover {
+    color: rgb(0, 192, 20);
+    transform: scale(1.1);
+    font-family: 'Bree Serif', serif;
+    border-radius: 25px;
+
+}
+
+.center {
+    text-align: center;
+}
